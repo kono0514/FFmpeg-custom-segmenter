@@ -1,3 +1,14 @@
+FFmpeg custom segmenter README
+=============
+
+This fork adds two new function to segmenter (segment.ts)
+1. `segment_write_temp` (used to prevent incomplete segment return)
+[Code from](https://mediabrowser.github.io/embytools/ffmpeg-2019_04_09.tar.gz)
+2. `segment_copyts` (prevents unneccesary empty segment creations when seeking (-ss) the input)
+[Code from](https://github.com/Diagonactic/plex-new-transcoder/blob/3cf85fd34bfa94f679ca934ebf9e2a31ff0bb0eb/plex-ffmpeg-source/NewPlexTranscoder/libavformat/segment.c)
+
+Used for https://github.com/kono0514/node-rtsp-to-hls-server
+
 FFmpeg README
 =============
 
